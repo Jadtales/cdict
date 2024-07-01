@@ -1,0 +1,90 @@
+.navbar_container {
+    height: 60px;
+    top: 50px;
+    width: 35%; /* Adjust width as necessary */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% of its own height and width */
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: bold;
+    background-color: var(--mainColor);
+    border: 2px solid black;
+    border-radius: var(--borderRadiusDefault);
+    position: fixed;
+}
+
+.navbar_container-clicked {
+    height: 400px;
+    margin: 0 20vw;
+    transition: 350ms ease-in-out;
+}
+
+.navbar_navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar_section ul li {
+    list-style: none;
+    font-size: 16px;
+}
+
+.navbar_section ul.navbar_list li.navbar_item {
+    font-size: 18px;
+    float: left;
+    margin: 0 5px;
+}
+
+.navbar_section .navbar_section-left{
+    margin-right: -2px;
+}
+
+.navbar_section ul li a {
+    text-decoration: none;
+    color: black;
+    text-align: end;
+    margin-top: 5px;
+}
+
+.navbar_section ul li button {
+    display: flex;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.navbar_section ul li button img {
+    color: white;
+    width: 25px;
+    transition: .2s linear;
+}
+
+/*- user interaction effects*/
+.navbar_item .searchIcon-clicked {
+    margin-right: 25vw;
+}
+
+.navbar_item button input#searchInput {
+    background-color: black;
+    border-radius: 100px;
+    outline: none;
+    width: 0;
+    border: none;
+    color: white;
+    transition: width .2s linear;
+}
+
+input#searchInput::placeholder {
+    color: white;
+}
+
+.searchedUpDiv_container {
+    max-height: 338px;
+    opacity: 0;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
