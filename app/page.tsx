@@ -2,6 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
+// imported components
+import {SearchFormComponent} from "@/app/components/main_page/navbar_layer/SearchFormComponent";
+
 // imported icon
 import cwIcon from "@/public/icons/arrow-right-line.svg"
 import emailIcon from "@/public/icons/login-circle-fill.svg"
@@ -40,7 +43,9 @@ export default function Home() {
                     Computer Science and Mathematics Knowledge.
                 </h1>
 
-                <h5 style={{fontWeight: "lighter"}}>Learn new topics everyday that will boost your knowledge</h5>
+                <h5 style={
+                    {fontWeight: "lighter", width: '100%', fontSize: '25px', border: 'none'}
+                }>Learn new topics everyday that will boost your knowledge</h5>
             </div>
 
             <div className={styles.stdEmailInputButtonCentering}>
@@ -52,10 +57,18 @@ export default function Home() {
                 </button>
             </div>
 
-            <div >
+            <div>
                 <div className={styles.todaysTopics_headlights}>
                     <h2>Today's Topics</h2>
                     <h2>Explore More</h2>
+                </div>
+
+                <div className={styles.todaystopicsContainer}>
+                    <div className={styles.todaysTopics_components}>
+                        <SearchFormComponent lookedUpTopic={'test'} />
+                        <SearchFormComponent lookedUpTopic={'test'} />
+                        <SearchFormComponent lookedUpTopic={'test'} />
+                    </div>
                 </div>
             </div>
 
