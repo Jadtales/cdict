@@ -4,6 +4,7 @@ import "./globals.css";
 
 // imported components
 import AppFooter from "./components/generalComponents/AppFooter"
+import page from "./page"
 import React from "react";
 
 
@@ -23,7 +24,7 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         {children}
-        <hr style={{width: '90%'}}/>
+        <hr style={{width: '98%'}}/>
         <AppFooter/>
         </body>
         </html>

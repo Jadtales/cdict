@@ -1,10 +1,13 @@
 :root{
   --backGroundColor: white;
+  --borderRadius: 50px;
 }
 
 *{
-  margin: 10%;
+  font-family: "Calibri", sans-serif;
+  margin: 1%;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--backGroundColor);
 }
+

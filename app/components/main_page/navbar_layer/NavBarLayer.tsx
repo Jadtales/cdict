@@ -1,8 +1,17 @@
+'use client'
+
 import React, {Fragment, useEffect, useState} from "react";
 import './navbar.css'
 
 // imported components
-import {SearchedUpDiv} from "./SearchedUpDiv.tsx";
+import {SearchFormComponent} from "./SearchFormComponent";
+
+// imported icons
+import bookmarkIcon from '@/public/icons/bookmark-circle-svgrepo-com.svg'
+import searchIcon from '@/public/icons/search-alt-2-svgrepo-com.svg'
+import chartIcon from '@/public/icons/donut-chart-line.svg'
+import settingIcon from '@/public/icons/settings-line.svg'
+import userLineIcon from '@/public/icons/user-line.svg'
 
 export default function Navbar() {
 
@@ -33,7 +42,7 @@ export default function Navbar() {
     }
 
 
-    return (<Fragment>
+    return (
         <div className="navbar_container">
             {/*todo: center the search icon in the center of the DOM*/}
             <nav className="navbar_navigation">
@@ -52,20 +61,20 @@ export default function Navbar() {
                     <ul className="navbar_list">
                         <li className="navbar_item">
                             <button id="bookmarkIcon">
-                                <img src="/src/icons/bookmark-circle-svgrepo-com.svg" alt="bookmark"/>
+                                <img src={bookmarkIcon.src} alt="bookmark"/>
                             </button>
                         </li>
 
                         {/*input/search button*/}
                         <li className="navbar_item">
                             <button id="searchIcon-button" type="submit">
-                                <img src="/src/icons/search-alt-2-svgrepo-com.svg" alt="searchIcon" id="searchIcon"/>
+                                <img src={searchIcon.src} alt="searchIcon" id="searchIcon"/>
                                 <input type="search" id="searchInput" placeholder="look up wisdome"/>
                             </button>
                         </li>
                         <li className="navbar_item">
                             <button id="processButton">
-                                <img src="/src/icons/donut-chart-line.svg" alt="process"/>
+                                <img src={chartIcon.src} alt="process"/>
                             </button>
                         </li>
                     </ul>
@@ -75,26 +84,26 @@ export default function Navbar() {
                     <ul className="navbar_list">
                         <li className="navbar_item">
                             <button id="settingsIcon">
-                                <img src="/src/icons/settings-line.svg" alt="progress"/>
+                                <img src={settingIcon.src} alt="progress"/>
                             </button>
                         </li>
 
                         <li className="navbar_item">
                             <button id="userButton">
-                                <img src="/src/icons/user-line.svg" alt="me"/>
+                                <img src={userLineIcon.src} alt="me"/>
                             </button>
                         </li>
                     </ul>
                 </div>
             </nav>
-            {/*<div className="searchedUpDiv_container">*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"buffer"}/>*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"StringBuffer"}/>*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"StringBuffer"}/>*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"StringBuffer"}/>*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"StringBuffer"}/>*/}
-            {/*    <SearchedUpDiv lookedUpTopic={"StringBuffer"}/>*/}
-            {/*</div>*/}
+            <div className="searchedUpDiv_container">
+                <SearchFormComponent lookedUpTopic={"buffer"}/>
+                <SearchFormComponent lookedUpTopic={"StringBuffer"}/>
+                <SearchFormComponent lookedUpTopic={"StringBuffer"}/>
+                <SearchFormComponent lookedUpTopic={"StringBuffer"}/>
+                <SearchFormComponent lookedUpTopic={"StringBuffer"}/>
+                <SearchFormComponent lookedUpTopic={"StringBuffer"}/>
+            </div>
         </div>
-    </Fragment>)
+    )
 }

@@ -1,0 +1,70 @@
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.startingAndRegiButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stdButtonsStyle {
+    outline: none;
+    border: 2px solid black;
+    padding: 12px 20px;
+    background-color: white;
+    color: white;
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.stdTxtLinks {
+    text-align-last: left;
+    text-decoration: none;
+    color: black;
+}
+
+.stdTxtHasBlackBC {
+    /*this css class must be applied to the Link tag & the button tag*/
+    color: white;
+    background-color: black;
+}
+
+.landingPage_header {
+    margin: 3% 0;
+    font-size: 35px;
+    text-align: center;
+    width: 100%;
+}
+
+.stdEmailInputButtonCentering {
+    text-align: center;
+}
+
+.stdInputStyling {
+    font-size: 20px;
+    border-radius: var(--borderRadius);
+    outline: none;
+    border: 2px solid black;
+    padding: 10px 40px;
+    width: 350px;
+    position: relative;
+}
+
+
+.stdInputsIconStyling {
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    margin: .8vw;
+    border: none;
+    border-radius: 100px;
+}
+
+div.todaysTopics_headlights{
+    display: flex;
+    justify-content: space-between;
+}

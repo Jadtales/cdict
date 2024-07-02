@@ -1,0 +1,21 @@
+.footer_mainContent{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.footer_mainContent ul{
+    text-align: center;
+    display: flex;
+    gap: 30px;
+}
+
+.footer_mainContent ul li a{
+    /*text-decoration: none;*/
+    color: black;
+    list-style: none;
+}
+
+div.footer_mainContent a img{
+    border: 2px solid black;
+}
