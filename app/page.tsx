@@ -1,9 +1,9 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import Link from "next/link";
+import styles from "./page.module.css";
 
 // imported components
-import {SearchFormComponent} from "@/app/components/main_page/navbar_layer/SearchFormComponent";
+import {TTComponents} from "@/app/components/generalComponents/TTCompnents";
 
 // imported icon
 import cwIcon from "@/public/icons/arrow-right-line.svg"
@@ -65,9 +65,11 @@ export default function Home() {
 
                 <div className={styles.todaystopicsContainer}>
                     <div className={styles.todaysTopics_components}>
-                        <SearchFormComponent lookedUpTopic={'test'} />
-                        <SearchFormComponent lookedUpTopic={'test'} />
-                        <SearchFormComponent lookedUpTopic={'test'} />
+                        <TTComponents todaysTopic={'test'}/>
+                        <TTComponents todaysTopic={'buffer'}/>
+                        <TTComponents todaysTopic={'streams'}/>
+                        <TTComponents todaysTopic={'test'}/>
+                        <TTComponents todaysTopic={'test'}/>
                     </div>
                 </div>
             </div>

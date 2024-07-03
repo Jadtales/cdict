@@ -1,0 +1,20 @@
+.ttCompo_container{
+    background-color: blue;
+    width: 300px;
+    border-radius: var(--borderRadiusComponents);
+    padding: 5px;
+}
+
+.ttCompo_headlights{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    text-wrap: nowrap;
+    align-items: center;
+}
+
+span#h5Topic{
+    font-weight: lighter;
+    color: #6d6d6d;
+    text-decoration-line: underline;
+}

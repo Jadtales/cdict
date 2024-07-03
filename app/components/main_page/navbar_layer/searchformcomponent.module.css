@@ -1,4 +1,4 @@
-div#searchedUpDiv{
+div.searchedUpDiv {
     margin: 1% 25%;
     padding: 10px;
     border-radius: 20px;
@@ -6,7 +6,7 @@ div#searchedUpDiv{
     background-color: #d2e2e1;
 }
 
-h5{
+h1.searchedUpWord {
     font-size: 15px;
     /*text-decoration: 1px black underline;*/
     color: black;
@@ -17,11 +17,11 @@ h5{
     background-color: white;
 }
 
-p#topic{
+p.topic {
     font-weight: normal;
 }
 
-#searchedUpDiv .searchedUpDiv_userChoice{
+.searchedUpDiv .searchedUpDiv_userChoice {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -29,7 +29,7 @@ p#topic{
     margin: 0 10px;
 }
 
-.searchedUpDiv_userChoice img{
+.searchedUpDiv_userChoice img {
     width: 35px;
     background-color: black;
     border-radius: 100px;
