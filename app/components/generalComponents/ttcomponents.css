@@ -1,11 +1,28 @@
-.ttCompo_container{
-    background-color: blue;
-    width: 300px;
+.ttCompo_container {
+    background-color: #F8FD92FF;
     border-radius: var(--borderRadiusComponents);
-    padding: 5px;
+    padding: 20px;
 }
 
-.ttCompo_headlights{
+
+.ttCompo_headlights, span, img, div.ttCompoFlags,
+h1,
+p {
+    background-color: transparent;
+}
+
+h1#tt_title{
+    font-size: 50px;
+}
+
+.componentTopLayer{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    text-wrap: nowrap;
+}
+
+.ttCompo_headlights {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -13,8 +30,12 @@
     align-items: center;
 }
 
-span#h5Topic{
-    font-weight: lighter;
-    color: #6d6d6d;
-    text-decoration-line: underline;
+.ttCompo_headlights img{
+    fill: black;
+    background-color: black;
+    border-radius: 100px;
+}
+
+span#h5Topic {
+    letter-spacing: 1px;
 }

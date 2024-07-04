@@ -69,7 +69,6 @@ export default function Home() {
                         <TTComponents todaysTopic={'buffer'}/>
                         <TTComponents todaysTopic={'streams'}/>
                         <TTComponents todaysTopic={'test'}/>
-                        <TTComponents todaysTopic={'test'}/>
                     </div>
                 </div>
             </div>

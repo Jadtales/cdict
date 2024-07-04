@@ -16,17 +16,19 @@ interface ttcomponentsInterface {
 export const TTComponents: React.FC<ttcomponentsInterface> = ({todaysTopic,}) => {
     return (
         <div className="ttCompo_container">
-            <div className="ttCompo_headlights">
-                <span id="h5Topic">Topic</span>
-                <img src={bookmark.src} alt="saveTopic" width={21}/>
-                <div className="ttCompoFlags">
-                    <CompoFlags componentFlag={ttFlags.cwFlag}/>
+            <div className="componentTopLayer">
+                <div className="ttCompo_headlights">
+                    <span id="h5Topic">Topic</span>
+                    <img src={bookmark.src} alt="saveTopic" width={21}/>
                 </div>
+                <CompoFlags componentFlag={ttFlags.cwFlag}/>
             </div>
-            <h1>{todaysTopic}</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deserunt illo magni nihil perferendis
-                soluta, totam ullam.</p>
+            <h1 id="tt_title">{todaysTopic}</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab animi atque ea fuga laborum possimus
+                quisquam repellendus? Aliquid, blanditiis, dolore inventore iste minima nostrum numquam omnis quam
+                repudiandae sequi soluta.
+            </p>
         </div>
     )
 }
