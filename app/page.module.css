@@ -7,6 +7,12 @@ nav.navbar {
 div.startingAndRegiButtons {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+}
+
+span.stdHighlightedKeywords{
+    text-decoration: underline;
+    text-decoration-color: #F8FD92FF;
 }
 
 .stdButtonsStyle {
@@ -35,8 +41,9 @@ div.startingAndRegiButtons {
 
 .landingPage_header {
     margin: 3% 0;
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
+    text-align-last: center;
     width: 100%;
 }
 
@@ -74,6 +81,5 @@ div.todaysTopics_headlights{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    height: 35vh;
     width: 100%;
 }

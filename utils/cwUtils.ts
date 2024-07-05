@@ -23,4 +23,5 @@ export const cwDefaultColors = {
     yellow: '#F8FD92FF',
     babyGreen: '#d2e2e1',
     purple: '#cb9cfa',
+    dimWhite: 'currentcolor'
 } as const

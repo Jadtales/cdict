@@ -6,8 +6,7 @@
 
 *{
   font-family: "Calibri", sans-serif;
-  margin: .6% ;
-  padding: 0;
+  margin: .5%;
   box-sizing: border-box;
   background-color: var(--backGroundColor);
 }

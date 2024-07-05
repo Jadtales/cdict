@@ -1,9 +1,9 @@
 .ttCompo_container {
-    background-color: #F8FD92FF;
+    background-color: #d2e2e1;
     border-radius: var(--borderRadiusComponents);
-    padding: 20px;
+    padding: 25px;
+    /*max-height: 36vh;*/
 }
-
 
 .ttCompo_headlights, span, img, div.ttCompoFlags,
 h1,
@@ -11,31 +11,61 @@ p {
     background-color: transparent;
 }
 
-h1#tt_title{
+h1#tt_title {
     font-size: 50px;
-}
-
-.componentTopLayer{
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-    text-wrap: nowrap;
 }
 
 .ttCompo_headlights {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
-    text-wrap: nowrap;
+    gap: 5px;
+
+    & .ttCompo_headlights, span, img, div.ttCompoFlags,
+    h1,
+    p {
+        background-color: transparent;
+    }
+}
+
+.componentTopLayer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: transparent;
+    text-wrap: nowrap;
 }
 
 .ttCompo_headlights img{
-    fill: black;
     background-color: black;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 span#h5Topic {
     letter-spacing: 1px;
+}
+
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+div.ttCompo_briefIntro {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+
+    & a#gotoCompoLink {
+        background-color: transparent;
+
+
+        & img {
+            display: block;
+            border-radius: 5px;
+            background-color: rgba(255,255,255,0.68);
+            align-items: center;
+        }
+    }
 }

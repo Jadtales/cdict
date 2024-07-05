@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
+
 // imported components
 import {TTComponents} from "@/app/components/generalComponents/TTCompnents";
 
@@ -40,7 +41,8 @@ export default function Home() {
             <div className={styles.landingPage_header}>
                 <h1>
                     Unlock the Infinite World of
-                    Computer Science and Mathematics Knowledge.
+                    <span className={styles.stdHighlightedKeywords}> Computer Science</span> and <span
+                    className={styles.stdHighlightedKeywords}> Mathematics</span> Knowledge.
                 </h1>
 
                 <h5 style={
