@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={inter.className}>
+        <body className={inter.className} id="pagesContainer">
         {children}
-        <hr style={{width: '98%'}}/>
+        <hr style={{width: '100%', margin: '20px 0'}}/>
         <AppFooter/>
         </body>
         </html>

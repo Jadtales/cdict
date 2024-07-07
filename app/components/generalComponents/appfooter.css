@@ -16,7 +16,18 @@
     list-style: none;
 }
 
+.footer_mainContent ul li:first-child{
+    list-style: none;
+}
+
 div.footer_mainContent a img{
     border: 2px solid black;
     border-radius: var(--borderRadius);
+}
+
+@media screen and (width <= 500px){
+    #pagesFooter{
+        margin: 15px 0;
+    }
+
 }

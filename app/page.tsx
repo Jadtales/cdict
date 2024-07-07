@@ -46,7 +46,7 @@ export default function Home() {
                 </h1>
 
                 <h5 style={
-                    {fontWeight: "lighter", width: '100%', fontSize: '25px', border: 'none'}
+                    {fontWeight: "lighter", width: '100%', fontSize: '.7em', border: 'none', marginTop: '2%'}
                 }>Learn new topics everyday that will boost your knowledge</h5>
             </div>
 

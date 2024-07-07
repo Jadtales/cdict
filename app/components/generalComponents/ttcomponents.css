@@ -12,7 +12,7 @@ p {
 }
 
 h1#tt_title {
-    font-size: 50px;
+    font-size: 3em;
 }
 
 .ttCompo_headlights {
@@ -49,6 +49,7 @@ p {
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-size: 1.1em;
 }
 
 div.ttCompo_briefIntro {
