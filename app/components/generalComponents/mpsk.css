@@ -1,25 +1,37 @@
-.ttCompo_container {
-    background-color: #d2e2e1;
+/*----searched keyword component----*/
+.mpsk_container {
+    border: 2px solid black;
     border-radius: var(--borderRadiusComponents);
     padding: 25px;
-    /*max-height: 36vh;*/
+    /*height: 74vh;*/
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
 }
 
-.ttCompo_headlights, span, img, div.ttCompoFlags,
+.mpsk_container:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.mpsk_headlights, span, img, div.mpskCompoFlags,
 h1,
 p {
     background-color: transparent;
 }
 
-h1#tt_title {
+h1#mpsk_title {
     font-size: 3em;
+    color: black;
 }
 
-.ttCompo_headlights {
+.mpsk_headlights {
     display: flex;
     gap: 5px;
 
-    & .ttCompo_headlights, span, img, div.ttCompoFlags,
+    & .mpsk_headlights, span, img, div.ttCompoFlags,
     h1,
     p {
         background-color: transparent;
@@ -32,11 +44,17 @@ h1#tt_title {
     align-items: center;
     background-color: transparent;
     text-wrap: nowrap;
-    height: 25.571px;
 }
 
-span#h5Topic {
+.mpsk_headlights img{
+    background-color: black;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+span#mpsk_h5Topic {
     letter-spacing: 1px;
+    color: black;
 }
 
 p {
@@ -47,7 +65,7 @@ p {
     font-size: 1.1em;
 }
 
-div.ttCompo_briefIntro {
+div.mpsk_briefIntro {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
@@ -64,4 +82,8 @@ div.ttCompo_briefIntro {
             align-items: center;
         }
     }
+}
+
+div.mpsk_briefIntro h3{
+    background-color: blue;
 }

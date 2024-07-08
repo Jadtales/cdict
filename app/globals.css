@@ -11,7 +11,8 @@
   padding: 0;
   touch-action: none;
   box-sizing: border-box;
-  background-color: var(--backGroundColor);
+  /*background-color: var(--backGroundColor);*/
+  scroll-behavior: smooth;
 }
 
 body#pagesContainer{
@@ -26,10 +27,21 @@ body#pagesContainer{
   min-height: 100vh;
 }
 
+.themeModeLight{
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.themeModeDark{
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+
 @media screen and (width <= 820px){
   body#pagesContainer{
     max-width: var(--maxWidth);
-    /*margin: 3.5% 3%;*/
     margin: 3% 3%;
     height: 100vh;
   }

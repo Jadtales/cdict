@@ -24,7 +24,6 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className} id="pagesContainer">
         {children}
-        <hr style={{width: '100%', margin: '20px 0'}}/>
         <AppFooter/>
         </body>
         </html>

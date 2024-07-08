@@ -32,7 +32,7 @@ export default function Home() {
                         <Link href="/app/components/userRegistration" className={styles.stdTxtLinks}>Log In</Link>
                     </button>
                     <button className={`${styles.stdButtonsStyle} ${styles.stdTxtHasBlackBC}`}>
-                        <Link href="/app/components/main_page"
+                        <Link href="/routes/home"
                               className={`${styles.stdTxtLinks} ${styles.stdTxtHasBlackBC}`}>Get Started</Link>
                     </button>
                 </div>

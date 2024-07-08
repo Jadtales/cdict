@@ -1,55 +1,58 @@
 .navbar_container {
-    height: 60px;
     top: 50px;
-    width: 35%; /* Adjust width as necessary */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset by 50% of its own height and width */
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: bold;
-    background-color: var(--mainColor);
-    border: 2px solid black;
-    border-radius: var(--borderRadiusDefault);
+    width: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: fixed;
+    background-color: transparent;
 }
 
-.navbar_container-clicked {
-    height: 400px;
-    margin: 0 20vw;
-    transition: 350ms ease-in-out;
-}
 
 .navbar_navigation {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     width: 100%;
+
+    border: 2px solid black;
+    border-radius: var(--borderRadius);
 }
 
-.navbar_section ul li {
-    list-style: none;
-    font-size: 16px;
-}
-
-.navbar_section ul.navbar_list li.navbar_item {
-    font-size: 18px;
-    float: left;
+.navbar_section-center button {
+    display: flex;
+    flex-direction: row;
     margin: 0 5px;
 }
 
-.navbar_section .navbar_section-left{
-    margin-right: -2px;
+.navbar_section {
+    list-style: none;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
 }
 
-.navbar_section ul li a {
+.navbar_section button {
+    margin: 0 5px;
+}
+
+.navbar_section-right {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navbar_section {
     text-decoration: none;
     color: black;
     text-align: end;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
-.navbar_section ul li button {
+.navbar_section button {
     display: flex;
+    flex-direction: row;
     padding: 5px;
     border-radius: 100px;
     background-color: black;
@@ -57,19 +60,17 @@
     border: none;
 }
 
-.navbar_section ul li button img {
+.navbar_section button img {
     color: white;
     width: 25px;
+    height: auto;
     transition: .2s linear;
 }
 
-/*- user interaction effects*/
-.navbar_item .searchIcon-clicked {
-    margin-right: 25vw;
-}
 
-.navbar_item button input#searchInput {
+.navbar_section-center button input {
     background-color: black;
+    padding: 4.5px 0;
     border-radius: 100px;
     outline: none;
     width: 0;
@@ -78,9 +79,22 @@
     transition: width .2s linear;
 }
 
-input#searchInput::placeholder {
+input::placeholder {
     color: white;
 }
+
+/* User interaction effects */
+button.searchIcon-button-active{
+    /*width: 200px;*/
+
+}
+
+.navbar_section-center button input.searchInput-active {
+    transition: .2s linear;
+    width: 300px;
+}
+
+
 
 .searchedUpDiv_container {
     max-height: 338px;

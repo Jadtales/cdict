@@ -1,0 +1,35 @@
+div#mainpage{
+    margin-top: 6rem;
+}
+
+.mainpageContent{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 2rem;
+}
+
+div.dailyTTContainer {
+}
+
+div.ttContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    height: 74vh;
+    border-radius: var(--borderRadiusComponents);
+}
+
+div.mpskComponent{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 74vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: var(--borderRadiusComponents);
+    scroll-behavior: smooth;
+}

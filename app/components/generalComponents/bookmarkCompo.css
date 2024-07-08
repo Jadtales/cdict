@@ -1,0 +1,16 @@
+.bookmark_container{
+    cursor: pointer;
+}
+
+.bookmark_container-active{
+    width: 10vw;
+    background-color: black;
+    border-radius: 100px;
+    height: 21px;
+}
+
+.bookmark_container img{
+    background-color: black;
+    border-radius: 100px;
+}
+
