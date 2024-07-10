@@ -1,0 +1,23 @@
+
+div.dailyTTContainer{
+    margin-top: 6rem;
+
+}
+
+div.ttContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    height: 80vh;
+    border-radius: var(--borderRadiusComponents);
+}
+
+div.content{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 2rem;
+}

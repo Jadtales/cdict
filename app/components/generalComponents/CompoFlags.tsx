@@ -13,6 +13,7 @@ export default function CompoFlags({componentFlag}: any) {
     }
 
     return (
+        // @ts-ignore
         <h3 style={compoFlagStyles}>{componentFlag}</h3>
     )
 }

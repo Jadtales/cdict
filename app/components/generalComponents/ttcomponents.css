@@ -2,13 +2,6 @@
     background-color: #d2e2e1;
     border-radius: var(--borderRadiusComponents);
     padding: 25px;
-    /*max-height: 36vh;*/
-}
-
-.ttCompo_headlights, span, img, div.ttCompoFlags,
-h1,
-p {
-    background-color: transparent;
 }
 
 h1#tt_title {
@@ -18,12 +11,8 @@ h1#tt_title {
 .ttCompo_headlights {
     display: flex;
     gap: 5px;
-
-    & .ttCompo_headlights, span, img, div.ttCompoFlags,
-    h1,
-    p {
-        background-color: transparent;
-    }
+    font-size: 1.2rem;
+    height: 25px;
 }
 
 .componentTopLayer {
@@ -60,7 +49,7 @@ div.ttCompo_briefIntro {
         & img {
             display: block;
             border-radius: 5px;
-            background-color: rgba(255,255,255,0.68);
+            background-color: rgba(255, 255, 255, 0.68);
             align-items: center;
         }
     }

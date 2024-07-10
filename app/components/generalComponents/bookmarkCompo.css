@@ -1,15 +1,20 @@
-.bookmark_container{
+.bookmark_container {
     cursor: pointer;
 }
 
-.bookmark_container-active{
+.bookmark_container-active {
     width: 10vw;
     background-color: black;
     border-radius: 100px;
-    height: 21px;
+    transition: .1s ease-out;
 }
 
-.bookmark_container img{
+.bookmark_container-inactive {
+    width: 0;
+    transition: .1s ease-out;
+}
+
+.bookmark_container img {
     background-color: black;
     border-radius: 100px;
 }

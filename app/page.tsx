@@ -31,10 +31,11 @@ export default function Home() {
                     <button className={styles.stdButtonsStyle}>
                         <Link href="/app/components/userRegistration" className={styles.stdTxtLinks}>Log In</Link>
                     </button>
-                    <button className={`${styles.stdButtonsStyle} ${styles.stdTxtHasBlackBC}`}>
-                        <Link href="/routes/home"
-                              className={`${styles.stdTxtLinks} ${styles.stdTxtHasBlackBC}`}>Get Started</Link>
-                    </button>
+                    <Link href="/routes/bookmarks">
+                        <button className={`${styles.stdButtonsStyle} ${styles.stdTxtHasBlackBC}`}>
+                            Get Started
+                        </button>
+                    </Link>
                 </div>
             </nav>
 

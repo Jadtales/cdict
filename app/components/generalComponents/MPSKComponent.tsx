@@ -1,5 +1,6 @@
 import bookmark from "@/public/icons/bookmark-circle-svgrepo-com.svg";
 import CompoFlags from "@/app/components/generalComponents/CompoFlags";
+import {BookmarkComponent} from "@/app/components/generalComponents/BookmarkComponent";
 import {ttFlags} from "@/utils/cwUtils";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default function MPSKComponent() {
             <div className="componentTopLayer">
                 <div className="mpsk_headlights">
                     <span id="mpsk_h5Topic">Topic</span>
-                    <img src={bookmark.src} alt="saveTopic" width={21}/>
+                    <BookmarkComponent/>
                 </div>
                 <CompoFlags componentFlag={ttFlags.cwFlag}/>
             </div>

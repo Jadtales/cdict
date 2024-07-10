@@ -2,6 +2,8 @@
 
 import './navbar.css'
 import Image from 'next/image'
+import {useState} from "react";
+import {useRouter} from "next/navigation";
 
 // imported components
 import {SearchFormComponent} from "./SearchFormComponent";
@@ -13,10 +15,11 @@ import chartIcon from '@/public/icons/donut-chart-line.svg'
 import settingIcon from '@/public/icons/settings-line.svg'
 import userLineIcon from '@/public/icons/user-line.svg'
 import themeModeIcon from '@/public/icons/moon-line.svg'
-import {useState} from "react";
+
 
 export default function Navbar() {
     const [isActive, setIsActive] = useState<boolean>(false)
+    const router = useRouter()
 
     const handleNavBarStyling = (): void => {
         const navBarContainer = document.querySelector('.navbar_container') as HTMLDivElement
@@ -38,6 +41,10 @@ export default function Navbar() {
 
     }
 
+    const handlePagesRouting = (path: string): void => {
+        router.push(path)
+    }
+
 
     return (
         <div className="navbar_container">
@@ -51,15 +58,18 @@ export default function Navbar() {
 
                 <div className="navbar_section navbar_section-center">
                     {/*input/search button*/}
-                    <button id="searchIcon-button" type="submit" onClick={handleInputSizeExpansion} className={isActive ? 'searchIcon-button-active' : ''}>
+                    <button id="searchIcon-button" type="submit" onClick={handleInputSizeExpansion}
+                            className={isActive ? 'searchIcon-button-active' : ''}>
                         <img src={searchIcon.src} alt="searchIcon" id="searchIcon"/>
                         <input type="search" placeholder="look up wisdome"
                                className={isActive ? 'searchInput-active' : ''}/>
                     </button>
-                    <button id="bookmarkIcon">
+
+                    <button id="bookmarkIcon" onClick={() => handlePagesRouting('/routes/bookmarks')}>
                         <Image src={bookmarkIcon} alt="bookmark"/>
                     </button>
-                    <button id="processButton">
+
+                    <button id="processButton" onClick={() => handlePagesRouting('/routes/stats')}>
                         <Image src={chartIcon} alt="process"/>
                     </button>
                 </div>

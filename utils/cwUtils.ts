@@ -19,9 +19,11 @@ export const ttFlags = {
 
 
 export const cwDefaultColors = {
-    black: '#000000',
+    black: '#ffffff',
     yellow: '#F8FD92FF',
     babyGreen: '#d2e2e1',
     purple: '#cb9cfa',
+    peachy: '#ffe1cc',
+    dimBluedGray: '#eceff4',
     dimWhite: 'currentcolor'
 } as const
