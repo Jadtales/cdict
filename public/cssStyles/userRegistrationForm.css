@@ -1,0 +1,45 @@
+div.URF_container{
+    margin-top: 6rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+div.URForm{
+    padding: 10rem;
+    & h1{
+        font-size: 5rem;
+    }
+
+    & .form_welcoming{
+       margin-bottom: 20px;
+    }
+
+    & .registrationForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+
+        & input{
+            padding: .5rem;
+            outline: none;
+            font-size: 1rem;
+            border: 1.5px black solid;
+            border-radius: var(--borderRadius);
+        }
+
+        & button{
+            background-color: black;
+            color: white;
+            padding: .5rem;
+            border-radius: var(--borderRadius);
+            border: none;
+            font-size: 1rem;
+            outline: none;
+        }
+    }
+}
+

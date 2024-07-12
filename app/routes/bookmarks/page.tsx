@@ -1,13 +1,20 @@
-'use client'
+import Image from 'next/image'
+import '@/public/cssStyles/usersavedcomponents.css'
+
+// imported icon
+import bookmarkIcon from '@/public/icons/bookmark-circle-svgrepo-com.svg';
 
 // imported components
-import MainPage from '@/app/components/main_page/MainPage'
-import React from "react";
+import BKCompo from "@/app/components/bookmarkPage/bookmarkedCompo/BKCompo";
 
-export default function BookmarkPage() {
+
+// todo: set up props for fetching data from the DB later
+export default function USComponents(): void {
+
     return (
-        <>
-            <MainPage/>
-        </>
+        <div className="USComponents_container">
+            <BKCompo />
+            <BKCompo />
+        </div>
     )
 }

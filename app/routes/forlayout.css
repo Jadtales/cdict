@@ -1,7 +1,11 @@
+div.content{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 2rem;
+}
 
 div.dailyTTContainer{
     margin-top: 6rem;
-
 }
 
 div.ttContainer{
@@ -16,8 +20,8 @@ div.ttContainer{
     border-radius: var(--borderRadiusComponents);
 }
 
-div.content{
-    display: grid;
-    grid-template-columns: 25% 75%;
-    gap: 2rem;
+
+
+div#mainpage{
+    margin-top: 6rem;
 }

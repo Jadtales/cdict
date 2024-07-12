@@ -1,0 +1,47 @@
+.USComponent_sepa {
+    background-color: white;
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: var(--borderRadiusComponents);
+    width: 100%;
+    height: 20.5rem;
+    min-width: 20rem;
+
+
+}
+
+.mainCompo {
+    background-color: #ffe1cc;
+    padding: 1rem;
+    border-radius: var(--borderRadiusComponents);
+    height: 16rem;
+
+    & h3 {
+        background-color: white;
+        border-radius: var(--borderRadius);
+        padding: .3rem;
+        width: 7rem;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+}
+
+.componentButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.USComponent_sepa button {
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+
+    padding: .6rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}

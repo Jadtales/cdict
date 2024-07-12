@@ -29,7 +29,7 @@ export default function Home() {
 
                 <div className={styles.startingAndRegiButtons}>
                     <button className={styles.stdButtonsStyle}>
-                        <Link href="/app/components/userRegistration" className={styles.stdTxtLinks}>Log In</Link>
+                        <Link href="/app/routes/userRegistration" className={styles.stdTxtLinks}>Log In</Link>
                     </button>
                     <Link href="/routes/bookmarks">
                         <button className={`${styles.stdButtonsStyle} ${styles.stdTxtHasBlackBC}`}>

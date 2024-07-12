@@ -1,0 +1,14 @@
+div.USComponents_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: var(--borderRadiusComponents);
+    gap: 20px;
+
+
+    max-height: 80vh;
+    overflow: hidden auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+

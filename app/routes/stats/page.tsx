@@ -1,13 +1,13 @@
 'use client'
 
 // imported components
-import MainPage from '@/app/components/main_page/MainPage'
+import MainPage from '@/app/components/bookmarkPage/MainPage'
 import React from "react";
 
-export default function UserStatsPage() {
+export default function UserStats(){
     return (
-        <>
-            <MainPage/>
-        </>
+        <div className="userstats_container">
+            <h1>user stats</h1>
+        </div>
     )
 }

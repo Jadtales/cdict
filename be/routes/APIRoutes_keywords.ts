@@ -5,7 +5,7 @@ const route = express.Router()
 const data = require('../dictDataInterface/htmlDataExtractor/htmlWorker')
 data('absolute path')
 // route.get(
-//     '/main_page/:keyword',
+//     '/bookmarkPage/:keyword',
 //     (req, res) => {
 //         const userKeywordInput = req.params.keyword
 //
