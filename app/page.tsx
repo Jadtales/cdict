@@ -52,7 +52,7 @@ export default function Home() {
             </div>
 
             <div className={styles.stdEmailInputButtonCentering}>
-                <button style={{border: 'none'}}>
+                <button style={{border: 'none', borderRadius: '20px'}}>
                     <Image src={emailIcon} alt={emailIcon} className={styles.stdInputsIconStyling}/>
                     <input type="email" className={styles.stdInputStyling}/>
                 </button>

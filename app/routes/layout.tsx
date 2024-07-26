@@ -9,7 +9,7 @@ import UserBookmarksPage from "@/app/routes/bookmarks/page";
 import UserStats from "@/app/routes/stats/page";
 import {usePathname} from "next/navigation";
 import SearchInputPage from "@/app/routes/searchForKeywords/page";
-import UserRegistrationForm from "@/app/routes/userRegistration/page";
+import UserRegistrationForm from "@/app/routes/userRegistration/[registrationMode]/page";
 
 const RoutesLayout: React.FC = ({children}: { children: React.ReactNode }) => {
     const pathname = usePathname()

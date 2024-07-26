@@ -1,7 +1,3 @@
-// tCompo flags
-
-// type TCompoFlagsTA = {[key: string]: string}; // TtFlagsTA -> TopicsComponentsTypeAnnotation
-
 // ttFlags -> today's topics flags
 export const ttFlags = {
     communityFlag: 'Community Made',

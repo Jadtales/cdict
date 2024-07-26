@@ -8,7 +8,7 @@ import Link from "next/link"
 // general imports
 import bookmark from "@/public/icons/bookmark-circle-svgrepo-com.svg";
 import gotoComponent from '@/public/icons/arrow-right-line.svg'
-import {ttFlags} from "@/utils/cwUtils";
+import {ttFlags} from "@/utils/stylingUtils/cwUtils";
 
 // imported external components
 import CompoFlags from "@/app/components/generalComponents/CompoFlags";

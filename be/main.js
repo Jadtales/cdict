@@ -1,16 +1,25 @@
-var express = require('express');
-var path = require('path');
-// constant variables
-var serverPort = process.env.PORT || 3000;
-var app = express();
-// serving static files
-app.use(express.static(path.join(__dirname, '../dist')));
-console.log(__dirname);
-// get the main page
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '../dist', 'index.html'));
-    console.log('hello');
-});
-app.listen(serverPort, function () {
-    console.log("Listening on port ".concat(serverPort));
-});
+// const express = require('express');
+// const path = require('path')
+//
+// // importing routers
+// const getHomeRouter = require('./routes/APIRoutes_home');
+// const getKeywordRouter = require('./routes/APIRoutes_keyword');
+//
+// // constant variables
+// const serverPort: string | number = process.env.PORT || 3000;
+// const app = express();
+//
+// // serving static files
+// app.use(express.static(path.join(__dirname, '../dist')))
+//
+// console.log(__dirname)
+// // get the main page
+// app.get('/', getKeywordRouter)
+//
+// app.get('/', getHomeRouter);
+//
+// app.listen(serverPort, () => {
+//     console.log(`Listening on port ${serverPort}`);
+// });
+var test = process.env.NODE_ENV;
+console.log(test === 'development');

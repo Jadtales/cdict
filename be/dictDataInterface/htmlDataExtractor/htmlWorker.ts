@@ -83,14 +83,14 @@ const getElementsWithClassT = (keywordRegex: RegExp, keywordLower: string, keywo
     });
 }
 
-// Function to get all keywords that start with the same first letter and their definitions
+// getting all keywords that start with the same first letter and their definitions
 export const getDictList = (keyword: string): WordDefinitionInterface[] => {
     const keywordLower: string = keyword.toLowerCase().trim();
     // Regular expression to match the entire keyword
     const keywordRegex: RegExp = new RegExp(`^${keywordLower}`, 'i');
     const results: WordDefinitionInterface[] = [];
 
-    // Find all div elements with class 't'
+    // finding all div elements with class 't'
     getElementsWithClassT(keywordRegex, keywordLower, keyword, results)
 
     return results;

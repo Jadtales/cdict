@@ -1,4 +1,4 @@
-import {cwDefaultColors} from "@/utils/cwUtils";
+import {cwDefaultColors} from "@/utils/stylingUtils/cwUtils";
 
 export default function CompoFlags({componentFlag}: any) {
 
