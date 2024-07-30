@@ -7,7 +7,7 @@ export function hashUserData(userPassword: string){
     return hashUserPassword.toString('hex') + ":" + hashUserPassword
 }
 
-export function verifyUserData(storedPassword: string, hashedUserPassword: string){
+export function verifyUserPassword(storedPassword: string, hashedUserPassword: string){
     const [hashedPassword, salt] = storedPassword.split(':')
     const hashedPasswordBuffer = Buffer.from(hashedPassword).toString('hex')
     const givenPasswordBuffer = crypto.scryptSync(hashedPassword, salt, 64)

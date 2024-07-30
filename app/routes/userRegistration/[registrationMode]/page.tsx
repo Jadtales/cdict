@@ -5,7 +5,8 @@ import {useFormState} from 'react-dom'
 
 
 // imported external functionalities
-import {signUpUtil} from "@/utils/authUtils";
+import {signUpUtil} from "@/utils/dbUtils/authUtils";
+import {authMode} from "@/utils/dbUtils/authUtils";
 
 interface FormState {
     validationErrors?: {
@@ -17,7 +18,8 @@ interface FormState {
 }
 
 export default function UserRegistrationForm(): React.ReactElement | void {
-    const [formState, formAction] = useFormState<FormState, FormData>(signUpUtil, {
+
+    const [formState, formAction] = useFormState<FormState, FormData>(authMode.bind(null, ), {
         validationErrors: {}
     });
 
@@ -43,13 +45,6 @@ export default function UserRegistrationForm(): React.ReactElement | void {
             return false;
         }
     }
-
-    // const handleFormSubmission = function (event: Event): void {
-    //     event.preventDefault()
-    //
-    //     // console.log(event.)
-    // }
-
 
     return (
         <div className="URF_container">
