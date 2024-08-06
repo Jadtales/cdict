@@ -11,7 +11,7 @@ import {usePathname} from "next/navigation";
 import SearchInputPage from "@/app/routes/searchForKeywords/page";
 import UserRegistrationForm from "@/app/routes/userRegistration/[registrationMode]/page";
 
-const RoutesLayout: React.FC = ({children}: { children: React.ReactNode }) => {
+const RoutesLayout: React.FC = ({children}: { children: React.ReactNode}) => {
     const pathname = usePathname()
 
     return (

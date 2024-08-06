@@ -41,14 +41,14 @@ export default function Home() {
 
             <div className={styles.landingPage_header}>
                 <h1>
-                    Unlock the Infinite World of
+                    CW is the go to for developers to refresh
                     <span className={styles.stdHighlightedKeywords}> Computer Science</span> and <span
-                    className={styles.stdHighlightedKeywords}> Mathematics</span> Knowledge.
+                    className={styles.stdHighlightedKeywords}> Mathematics</span> keywords.
                 </h1>
 
                 <h5 style={
-                    {fontWeight: "lighter", width: '100%', fontSize: '.7em', border: 'none', marginTop: '2%'}
-                }>Learn new topics everyday that will boost your knowledge</h5>
+                    {fontWeight: "lighter", width: '100%', fontSize: '.4em', border: 'none', marginTop: '2%'}
+                }>You keep coming back because you forgot what does API stand for again :)</h5>
             </div>
 
             <div className={styles.stdEmailInputButtonCentering}>

@@ -1,24 +1,22 @@
 'use server'
 
 // -- imported components
-// import MainPage from '@/app/components/bookmarkPage/MainPage'
 import {verifyAuthUser} from "@/utils/dbUtils/sessionsUtils";
 import {redirect} from "next/navigation";
 
 export default async function UserStats() {
 
-    const isUserLoggedIn = await verifyAuthUser()
-    // if (!isUserLoggedIn.user) {
-    //     return redirect('/routes/userRegistration/login')
-    // }
+    const auth = await verifyAuthUser() // deletes the id from users_sessions database
+    console.log("User stats-->", auth)
+    if (!auth) {
+        redirect('/routes/userRegistration/login')
+    }
 
     return <>
-        {isUserLoggedIn ? <div>You must be loggedIn to view your latest learning stats</div> :
-            <div className="userstats_container">
-                <h1>user stats</h1>
-            </div>}
+        <div className="userstats_container">
+
+            {auth ? (<h1>you're in</h1>) : (<h1>you are not in</h1>)}
+        </div>
 
     </>
-
-
 }

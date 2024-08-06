@@ -3,10 +3,11 @@ import {usePathname, useRouter} from "next/navigation";
 import '@/public/cssStyles/userRegistrationForm.css'
 import {useFormState} from 'react-dom'
 
+type AuthMode = 'login' | 'signup'
 
 // imported external functionalities
-import {signUpUtil} from "@/utils/dbUtils/authUtils";
 import {authMode} from "@/utils/dbUtils/authUtils";
+
 
 interface FormState {
     validationErrors?: {
@@ -18,33 +19,21 @@ interface FormState {
 }
 
 export default function UserRegistrationForm(): React.ReactElement | void {
-
-    const [formState, formAction] = useFormState<FormState, FormData>(authMode.bind(null, ), {
-        validationErrors: {}
-    });
-
+    const pathname: string = usePathname().split('/').at(-1) as AuthMode
     const router = useRouter()
-    const pathname = usePathname()
+
+
+    const [formState, formAction] = useFormState<FormState, FormData>(
+        (state, formData) => authMode(state, pathname, formData),
+        {
+            validationErrors: {}
+        });
 
     const handleToLoginPage = (): void => {
-        const newPath: 'signup' | 'login' = pathname.endsWith('signup') ? 'login' : 'signup';
+        const newPath: 'signup' | 'login' = pathname === 'signup' ? 'login' : 'signup';
         router.push(`/routes/userRegistration/${newPath}`);
     }
 
-    const handleUserRegistrationExistance = async function (userEmail: string, userPassword: any): Promise<boolean> {
-        try {
-            const response = await fetch('/api/check-user-existence', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({userEmail, userPassword}),
-            });
-            const result = await response.json();
-            return result.exists;
-        } catch (error) {
-            console.error('Error checking user existence:', error);
-            return false;
-        }
-    }
 
     return (
         <div className="URF_container">
@@ -53,9 +42,9 @@ export default function UserRegistrationForm(): React.ReactElement | void {
 
                 <div className="form_welcoming">
                     <h2>Start learning new concepts.</h2>
-                    <p>If you already have an account.
+                    <p> {pathname === 'signup' ? 'If you already have an account. ' : 'Create an account. '}
                         <span style={{textDecoration: 'underline', cursor: 'pointer'}} onClick={handleToLoginPage}>
-                            {pathname.endsWith('login') ? 'Sign Up' : 'LogIn'}
+                            {pathname === 'login' ? 'signup' : 'Login'}
                         </span>
                     </p>
                 </div>
@@ -71,7 +60,7 @@ export default function UserRegistrationForm(): React.ReactElement | void {
                         </div>
                     )}
                     <form action={formAction}>
-                        {pathname.endsWith('signup') &&
+                        {pathname === 'signup' &&
                             <>
                                 <input type="text" placeholder="your name" name='userName'/>
                                 <input type="text" placeholder="your username" name='userUsername'/>
